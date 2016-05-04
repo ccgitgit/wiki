@@ -1,0 +1,9 @@
+  "scripts": {
+    "build:js": "browserify ./src/app.js -t [ babelify --optional es7.classProperties ] --outfile public/all.js",
+    "build:watch": "watch 'npm run build' ./src "
+  },
+  改
+    "scripts": {
+    "build:js": "browserify ./src/app.js -t [ babelify --optional es7.classProperties ] --outfile public/all.js",
+    "build:watch": "watch \"npm run build\" ./src "
+  },

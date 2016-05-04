@@ -1,0 +1,28 @@
+{
+  "name": "wiki",
+  "version": "1.0.0",
+  "description": "A live collaborative wiki",
+  "main": "server.js",
+  "scripts": {
+    "build:js": "browserify ./src/app.js -t [ babelify --optional es7.classProperties ] --outfile public/all.js",
+    "build": "watch \"npm run build:js\" ./src "
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babelify": "^6.4.0",
+    "browserify": "^11.0.1",
+    "watch": "^0.16.0"
+  },
+  "dependencies": {
+    "body-parser": "^1.15.0",
+    "cookie-parser": "^1.4.1",
+    "ejs": "^2.4.1",
+    "express": "^4.13.4",
+    "express-session": "^1.13.0",
+    "firebase": "^2.4.1",
+    "markdown": "^0.5.0",
+    "react": "^0.13.3",
+    "react-router": "^0.13.5"
+  }
+}
